@@ -25,7 +25,7 @@ public class Invalidcontact_step {
 	}
 
 	@Then("^user clicks on the send message button$")
-	public void user_clicks_on_the_send_message_button()  {
+	public void user_clicks_on_the_send_message_button() throws InterruptedException  {
 	   c.send();
 	}
 

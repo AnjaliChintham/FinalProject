@@ -15,7 +15,7 @@ public class loginandlogout
 
 	public void url() 
 	{
-	System.setProperty("webdriver.chrome.driver", "D:\\Selenium Jars\\Chrome jars\\chromedriver.exe");
+	System.setProperty("webdriver.chrome.driver", "D:\\Selenium Jars\\Chrome Driver\\chromedriver.exe");
 	driver = new ChromeDriver();
 	driver.manage().window().maximize();
 	driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
@@ -28,17 +28,19 @@ public class loginandlogout
 		driver.get("https://demoblaze.com/index.html");
 		System.out.println(driver.getTitle());
 	}
-	public void userclick(String user,String Password)
+	public void userclick(String user,String Password) throws InterruptedException
 	{
 		driver.findElement(By.xpath("//*[@id=\"login2\"]")).click();
 	
 		driver.findElement(By.id("loginusername")).sendKeys(user);
 			driver.findElement(By.id("loginpassword")).sendKeys(Password);
 			driver.findElement(By.xpath("//*[@id=\"logInModal\"]//div//div//div[3]//button[2]")).click();
+			Thread.sleep(5000);
+			driver.findElement(By.xpath("//*[@id=\"logout2\"]")).click();
 			
 	}
 	public void logout() {
-		driver.findElement(By.xpath("//*[@id=\"logout2\"]"));
+		
 	}
 
 }

@@ -22,7 +22,7 @@ public class Loginandlogout_step {
 	}
 
 	@Then("^user clicks the login button$")
-	public void user_clicks_the_login_button()  {
+	public void user_clicks_the_login_button() throws InterruptedException  {
 	    ob8.userclick("Ramya", "ramya");
 	}
 

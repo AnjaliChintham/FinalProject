@@ -29,7 +29,7 @@ public class Validcontact_Step {
 	}
 
 	@Then("^user clicks on send message button$")
-	public void user_clicks_on_send_message_button()  {
+	public void user_clicks_on_send_message_button() throws InterruptedException  {
 	    
 		de.send();
 	}
